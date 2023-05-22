@@ -1,9 +1,17 @@
+/* Custom Properties */
 :root {
     --negro: #000;
     --blanco: #fff;
     --gris: #8a8a8a;
+    --celesteClaro: rgb( 204, 229, 255);
+    --azulMarino: #1c445a;
+    --verdeClaro: rgb(150, 201, 62);
+    --verdeOscuro: rgb(120, 171, 31);
+    --verdeBosque: #157347;
+    --verdePro: rgb(41, 167, 68);
 }
 
+/* Normalización */
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -14,7 +22,7 @@ html {
     /* Familia por defecto */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* Color de texto base */
-    color: #000;
+    color: var(--negro);
     /* Efeto suave en scroll */
     scroll-behavior: smooth;
 }
@@ -44,7 +52,7 @@ img {
 
 h1 {
     font-size: 3.8rem;
-    color: #fff;
+    color: var(--blanco);
 }
 h2 {
     font-size: 2.8rem;
@@ -101,11 +109,11 @@ input[type="number"] {
 /* Barra de navegacion */
 
 .hover a:hover {
-    color: #fff !important;
+    color: var(--blanco) !important;
 }
 
 .text-verde-pro {
-    color: rgb(41, 167, 68) !important;
+    color: var(--verdePro) !important;
 }
 
 
@@ -129,17 +137,15 @@ input[type="number"] {
 }
 
 .verde-pro {
-    background-color: rgb(41, 167, 68) !important;
-    border-color: rgb(41, 167, 68) !important;
+    background-color: var(--verdePro) !important;
+    border-color: var(--verdePro) !important;
 }
 
 .verde-pro:hover {
-    background-color: #157347 !important;
-    border-color: #157347 !important;
-    color: #fff !important;
+    background-color: var(--verdeBosque) !important;
+    border-color: var(--verdeBosque) !important;
+    color: var(--blanco) !important;
 }
-
-
 
 /* Formulario */
 
@@ -148,21 +154,20 @@ input[type="number"] {
 }
 
 .formulario {
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
 }
 
 .verde-claro {
-    background-color: rgb(150, 201, 62) !important;
-    border-color: rgb(150, 201, 62) !important;
+    background-color: var(--verdeClaro) !important;
+    border-color: var(--verdeClaro) !important;
 }
 
 .verde-claro:hover {
-    background-color: rgb(120, 171, 31) !important;
-    border-color: rgb(120, 171, 31) !important;
-    color: #fff !important;
+    background-color: var(--verdeOscuro) !important;
+    border-color: var(--verdeOscuro) !important;
+    color: var(--blanco) !important;
 }
-
 
 /* Footer */
 
@@ -171,19 +176,25 @@ input[type="number"] {
 }
 
 .hover-footer a:hover {
-    color: #8a8a8a !important;
+    color: var(--gris) !important;
 }
 
-/* Conviertete.html */
+/* conviertete.html */
+/* Section */
 
 /* Formulario compra de tickets */
-.box-total {
-    background-color: rgb( 204, 229, 255) !important;
-    border-color: rgb( 204, 229, 255) !important;
-    /* color: rgb( 0, 64, 133) !important; */
-    color: #1c445a;
+
+.formulario-tickets {
+    width: 50%;
+    margin: 0 auto;
 }
 
+.box-total {
+    background-color: var(--celesteClaro) !important;
+    border-color: var(--celesteClaro) !important;
+    /* color: rgb( 0, 64, 133) !important; */
+    color: var(--azulMarino);
+}
 
 /* Responsive Model */
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -192,7 +203,6 @@ input[type="number"] {
     .navbar-nav {
         text-align: center;
     }
-
 
     /* Hero */
     .m-top-10 {
@@ -206,7 +216,6 @@ input[type="number"] {
         text-align: center !important;
     }
 
-
     /* Bs As Octubre */
     .block {
         display: block;
@@ -214,6 +223,9 @@ input[type="number"] {
 
     /* Conviertete en un Orador */
     .formulario {
+        width: 90%;
+    }
+    .formulario-tickets {
         width: 90%;
     }
 
@@ -230,11 +242,17 @@ input[type="number"] {
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
     /* Conviertete en un Orador */
     .formulario {
         width: 90%;
+    }
+
+    /* Formulario Compra Tickets */
+    .formulario-tickets {
+        width: 95% !important;
     }
 
     /* Bs As Octubre */
@@ -242,7 +260,6 @@ input[type="number"] {
         max-width: 100% !important;
         height: 100% !important;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -268,3 +285,19 @@ input[type="number"] {
     }
 
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /* Formulario Compra Tickets */
+    .formulario-tickets {
+        width: 70%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px)  {
+    .formulario {
+        width: 75%;
+    }
+}
+
+
